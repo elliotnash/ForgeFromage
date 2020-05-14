@@ -1,9 +1,9 @@
 {
   "parent": "block/block",
   "textures": {
-    "top": "fromage:block/cheese_table_birch_top_full",
-    "side": "fromage:block/cheese_table_birch_side",
-    "bottom": "fromage:block/cheese_table_birch_bottom",
+    "top": "fromage:blocks/cheese_table_birch_top_full",
+    "side": "fromage:blocks/cheese_table_birch_side",
+    "bottom": "fromage:blocks/cheese_table_birch_bottom",
     "particle": "#side"
   },
   "elements": [

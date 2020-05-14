@@ -1,9 +1,9 @@
 {
   "parent": "block/block",
   "textures": {
-    "top": "fromage:block/cheese_table_jungle_top",
-    "side": "fromage:block/cheese_table_jungle_side",
-    "bottom": "fromage:block/cheese_table_jungle_bottom",
+    "top": "fromage:blocks/cheese_table_jungle_top",
+    "side": "fromage:blocks/cheese_table_jungle_side",
+    "bottom": "fromage:blocks/cheese_table_jungle_bottom",
     "particle": "#side"
   },
   "elements": [

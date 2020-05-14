@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "fromage:item/daddy_cheese"
+    "layer0": "fromage:items/daddy_cheese"
   }
 }
