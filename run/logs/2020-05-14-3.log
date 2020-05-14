@@ -1,0 +1,152 @@
+[14May2020 13:56:58.646] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20200122.131323, --fml.mcVersion, 1.15.2, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 31.1.0, --version, MOD_DEV, --assetIndex, 1.15, --assetsDir, C:\Users\ellio\.gradle\caches\forge_gradle\assets, --username, Dev, --accessToken, ❄❄❄❄❄❄❄❄, --userProperties, {}]
+[14May2020 13:56:58.650] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 5.0.0+68+master.79f13f7 starting: java version 1.8.0_221 by Oracle Corporation
+[14May2020 13:56:59.109] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[14May2020 13:57:00.006] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\ellio\.gradle\caches\forge_gradle\assets, --assetIndex, 1.15, --username, Dev, --accessToken, ❄❄❄❄❄❄❄❄, --userProperties, {}]
+[14May2020 13:57:01.900] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[14May2020 13:57:12.880] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 build 10
+[14May2020 13:57:13.948] [modloading-worker-11/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 31.1.0, for MC 1.15.2 with MCP 20200122.131323
+[14May2020 13:57:13.948] [modloading-worker-11/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v31.1.0 Initialized
+[14May2020 13:57:14.151] [Render thread/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/]: Exception caught during firing event: Cannot set property BooleanProperty{name=full, clazz=class java.lang.Boolean, values=[true, false]} as it does not exist in Block{null}
+	Index: 2
+	Listeners:
+		0: NORMAL
+		1: ASM: class forge.fromage.init.BlockInit registerBlockItems(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+		2: ASM: class forge.fromage.init.BlockInit registerBlocks(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+		3: ASM: class forge.fromage.init.ItemInit registerItems(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+java.lang.IllegalArgumentException: Cannot set property BooleanProperty{name=full, clazz=class java.lang.Boolean, values=[true, false]} as it does not exist in Block{null}
+	at net.minecraft.state.StateHolder.with(StateHolder.java:93)
+	at forge.fromage.objects.blocks.cheese_table.<init>(cheese_table.java:17)
+	at forge.fromage.init.BlockInit.registerBlocks(BlockInit.java:36)
+	at net.minecraftforge.eventbus.ASMEventHandler_3_BlockInit_registerBlocks_Register.invoke(.dynamic)
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:80)
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:258)
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer.fireEvent(FMLModContainer.java:106)
+	at java.util.function.Consumer.lambda$andThen$0(Consumer.java:65)
+	at java.util.function.Consumer.lambda$andThen$0(Consumer.java:65)
+	at net.minecraftforge.fml.ModContainer.transitionState(ModContainer.java:112)
+	at net.minecraftforge.fml.ModList.lambda$dispatchSynchronousEvent$5(ModList.java:125)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at net.minecraftforge.fml.ModList.dispatchSynchronousEvent(ModList.java:125)
+	at net.minecraftforge.fml.ModList.lambda$static$1(ModList.java:96)
+	at net.minecraftforge.fml.LifecycleEventProvider.dispatch(LifecycleEventProvider.java:71)
+	at net.minecraftforge.fml.ModLoader.dispatchAndHandleError(ModLoader.java:197)
+	at net.minecraftforge.fml.ModLoader.lambda$gatherAndInitializeMods$24(ModLoader.java:189)
+	at net.minecraftforge.registries.GameData.fireRegistryEvents(GameData.java:966)
+	at net.minecraftforge.fml.ModLoader.gatherAndInitializeMods(ModLoader.java:189)
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$begin$2(ClientModLoader.java:97)
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$createRunnableWithCatch$5(ClientModLoader.java:113)
+	at net.minecraftforge.fml.client.ClientModLoader.begin(ClientModLoader.java:97)
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:393)
+	at net.minecraft.client.main.Main.main(Main.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:55)
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37)
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54)
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72)
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81)
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65)
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:102)
+
+[14May2020 13:57:14.152] [Render thread/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Caught exception during event RegistryEvent.Register<minecraft:block> dispatch for modid fromage
+java.lang.IllegalArgumentException: Cannot set property BooleanProperty{name=full, clazz=class java.lang.Boolean, values=[true, false]} as it does not exist in Block{null}
+	at net.minecraft.state.StateHolder.with(StateHolder.java:93) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at forge.fromage.objects.blocks.cheese_table.<init>(cheese_table.java:17) ~[main/:?]
+	at forge.fromage.init.BlockInit.registerBlocks(BlockInit.java:36) ~[main/:?]
+	at net.minecraftforge.eventbus.ASMEventHandler_3_BlockInit_registerBlocks_Register.invoke(.dynamic) ~[?:?]
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:80) ~[eventbus-2.0.0-milestone.1-service.jar:?]
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:258) ~[eventbus-2.0.0-milestone.1-service.jar:?]
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer.fireEvent(FMLModContainer.java:106) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:31.1]
+	at java.util.function.Consumer.lambda$andThen$0(Consumer.java:65) ~[?:1.8.0_221]
+	at java.util.function.Consumer.lambda$andThen$0(Consumer.java:65) ~[?:1.8.0_221]
+	at net.minecraftforge.fml.ModContainer.transitionState(ModContainer.java:112) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at net.minecraftforge.fml.ModList.lambda$dispatchSynchronousEvent$5(ModList.java:125) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[?:1.8.0_221]
+	at net.minecraftforge.fml.ModList.dispatchSynchronousEvent(ModList.java:125) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at net.minecraftforge.fml.ModList.lambda$static$1(ModList.java:96) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at net.minecraftforge.fml.LifecycleEventProvider.dispatch(LifecycleEventProvider.java:71) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at net.minecraftforge.fml.ModLoader.dispatchAndHandleError(ModLoader.java:197) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at net.minecraftforge.fml.ModLoader.lambda$gatherAndInitializeMods$24(ModLoader.java:189) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at net.minecraftforge.registries.GameData.fireRegistryEvents(GameData.java:966) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at net.minecraftforge.fml.ModLoader.gatherAndInitializeMods(ModLoader.java:189) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$begin$2(ClientModLoader.java:97) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$createRunnableWithCatch$5(ClientModLoader.java:113) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at net.minecraftforge.fml.client.ClientModLoader.begin(ClientModLoader.java:97) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:393) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:141) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_221]
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:55) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-5.0.0.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-5.0.0.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-5.0.0.jar:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81) [modlauncher-5.0.0.jar:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65) [modlauncher-5.0.0.jar:?]
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:102) [forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+[14May2020 13:57:14.171] [Render thread/FATAL] [net.minecraftforge.fml.ModLoader/LOADING]: Failed to complete lifecycle event LOAD_REGISTRIES, 1 errors found
+[14May2020 13:57:14.172] [Render thread/FATAL] [net.minecraftforge.eventbus.EventBus/EVENTBUS]: EventBus 0 shutting down - future events will not be posted.
+java.lang.Exception: stacktrace
+	at net.minecraftforge.eventbus.EventBus.shutdown(EventBus.java:278) ~[eventbus-2.0.0-milestone.1-service.jar:?]
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$createRunnableWithCatch$5(ClientModLoader.java:115) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at net.minecraftforge.fml.client.ClientModLoader.begin(ClientModLoader.java:97) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:393) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:141) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_221]
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:55) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-5.0.0.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-5.0.0.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-5.0.0.jar:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81) [modlauncher-5.0.0.jar:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65) [modlauncher-5.0.0.jar:?]
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:102) [forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?]
+[14May2020 13:57:16.284] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
+[14May2020 13:57:16.364] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
+[14May2020 13:57:16.391] [Server-Worker-3/ERROR] [net.minecraftforge.fml.ModLoader/LOADING]: Skipping lifecycle event SETUP, 1 errors found.
+[14May2020 13:57:16.391] [Server-Worker-3/FATAL] [net.minecraftforge.fml.ModLoader/LOADING]: Failed to complete lifecycle event SETUP, 1 errors found
+[14May2020 13:57:16.391] [Server-Worker-3/FATAL] [net.minecraftforge.eventbus.EventBus/EVENTBUS]: EventBus 0 shutting down - future events will not be posted.
+java.lang.Exception: stacktrace
+	at net.minecraftforge.eventbus.EventBus.shutdown(EventBus.java:278) ~[eventbus-2.0.0-milestone.1-service.jar:?]
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$createRunnableWithCatch$5(ClientModLoader.java:115) ~[?:?]
+	at net.minecraftforge.fml.client.ClientModLoader.startModLoading(ClientModLoader.java:123) ~[?:?]
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$onreload$3(ClientModLoader.java:105) ~[?:?]
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$createRunnableWithCatch$5(ClientModLoader.java:113) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1626) [?:1.8.0_221]
+	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1618) [?:1.8.0_221]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289) [?:1.8.0_221]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056) [?:1.8.0_221]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692) [?:1.8.0_221]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157) [?:1.8.0_221]
+[14May2020 13:57:21.286] [Server-Worker-2/ERROR] [net.minecraftforge.fml.ModLoader/LOADING]: Skipping lifecycle event ENQUEUE_IMC, 1 errors found.
+[14May2020 13:57:21.286] [Server-Worker-2/FATAL] [net.minecraftforge.fml.ModLoader/LOADING]: Failed to complete lifecycle event ENQUEUE_IMC, 1 errors found
+[14May2020 13:57:21.286] [Server-Worker-2/FATAL] [net.minecraftforge.eventbus.EventBus/EVENTBUS]: EventBus 0 shutting down - future events will not be posted.
+java.lang.Exception: stacktrace
+	at net.minecraftforge.eventbus.EventBus.shutdown(EventBus.java:278) ~[eventbus-2.0.0-milestone.1-service.jar:?]
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$createRunnableWithCatch$5(ClientModLoader.java:115) ~[?:?]
+	at net.minecraftforge.fml.client.ClientModLoader.finishModLoading(ClientModLoader.java:137) ~[?:?]
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$onreload$4(ClientModLoader.java:107) ~[?:?]
+	at java.util.concurrent.CompletableFuture.uniRun(CompletableFuture.java:705) [?:1.8.0_221]
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:687) [?:1.8.0_221]
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443) [?:1.8.0_221]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289) [?:1.8.0_221]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056) [?:1.8.0_221]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692) [?:1.8.0_221]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157) [?:1.8.0_221]
+[14May2020 13:57:21.542] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
+[14May2020 13:57:21.542] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
+[14May2020 13:57:21.666] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[14May2020 13:57:21.730] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x4 minecraft:textures/atlas/signs.png-atlas
+[14May2020 13:57:21.730] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[14May2020 13:57:21.731] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[14May2020 13:57:21.732] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[14May2020 13:57:21.732] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[14May2020 13:57:21.733] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[14May2020 13:57:22.177] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[14May2020 13:57:22.178] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[14May2020 13:57:22.178] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas

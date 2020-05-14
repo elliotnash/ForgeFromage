@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 public class Fromage {
 
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "fromage";
     public static Fromage instance;
 

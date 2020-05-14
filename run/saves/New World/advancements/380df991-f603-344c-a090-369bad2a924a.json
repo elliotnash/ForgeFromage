@@ -44,7 +44,11 @@
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:forest": "2020-05-13 23:53:28 -0700",
+      "minecraft:desert_hills": "2020-05-14 10:31:49 -0700",
+      "minecraft:desert": "2020-05-14 10:31:38 -0700",
+      "minecraft:dark_forest": "2020-05-14 10:31:23 -0700",
       "minecraft:river": "2020-05-13 23:51:37 -0700",
+      "minecraft:savanna": "2020-05-14 10:32:02 -0700",
       "minecraft:plains": "2020-05-13 22:40:53 -0700"
     },
     "done": false

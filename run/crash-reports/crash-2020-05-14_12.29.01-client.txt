@@ -1,0 +1,122 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 5/14/20 12:29 PM
+Description: Initializing game
+
+java.lang.IllegalStateException: The ObjectHolder annotation cannot apply to a field that does not map to a registry. Ensure the registry was created during the RegistryEvent.NewRegistry event. (found : net.minecraft.block.Block$Properties at forge.fromage.init.BlockInit.CheeseTableSettings)
+	at net.minecraftforge.registries.ObjectHolderRef.<init>(ObjectHolderRef.java:95) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?] {re:classloading}
+	at net.minecraftforge.registries.ObjectHolderRegistry.scanClassForFields(ObjectHolderRegistry.java:174) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?] {re:classloading}
+	at net.minecraftforge.registries.ObjectHolderRegistry.scanTarget(ObjectHolderRegistry.java:137) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?] {re:classloading}
+	at net.minecraftforge.registries.ObjectHolderRegistry.lambda$findObjectHolders$5(ObjectHolderRegistry.java:108) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?] {re:classloading}
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[?:1.8.0_221] {}
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[?:1.8.0_221] {}
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[?:1.8.0_221] {}
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382) ~[?:1.8.0_221] {}
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[?:1.8.0_221] {}
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[?:1.8.0_221] {}
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[?:1.8.0_221] {}
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[?:1.8.0_221] {}
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:1.8.0_221] {}
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418) ~[?:1.8.0_221] {}
+	at net.minecraftforge.registries.ObjectHolderRegistry.findObjectHolders(ObjectHolderRegistry.java:108) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?] {re:classloading}
+	at net.minecraftforge.fml.ModLoader.gatherAndInitializeMods(ModLoader.java:186) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?] {re:classloading}
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$begin$2(ClientModLoader.java:97) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$createRunnableWithCatch$5(ClientModLoader.java:113) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraftforge.fml.client.ClientModLoader.begin(ClientModLoader.java:97) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:393) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:141) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_221] {}
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_221] {}
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_221] {}
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_221] {}
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:55) ~[forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-5.0.0.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-5.0.0.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-5.0.0.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81) [modlauncher-5.0.0.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65) [modlauncher-5.0.0.jar:?] {}
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:102) [forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at net.minecraftforge.registries.ObjectHolderRef.<init>(ObjectHolderRef.java:95)
+	at net.minecraftforge.registries.ObjectHolderRegistry.scanClassForFields(ObjectHolderRegistry.java:174)
+	at net.minecraftforge.registries.ObjectHolderRegistry.scanTarget(ObjectHolderRegistry.java:137)
+	at net.minecraftforge.registries.ObjectHolderRegistry.lambda$findObjectHolders$5(ObjectHolderRegistry.java:108)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at net.minecraftforge.registries.ObjectHolderRegistry.findObjectHolders(ObjectHolderRegistry.java:108)
+	at net.minecraftforge.fml.ModLoader.gatherAndInitializeMods(ModLoader.java:186)
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$begin$2(ClientModLoader.java:97)
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$createRunnableWithCatch$5(ClientModLoader.java:113)
+	at net.minecraftforge.fml.client.ClientModLoader.begin(ClientModLoader.java:97)
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:393)
+
+-- Initialization --
+Details:
+Stacktrace:
+	at net.minecraft.client.main.Main.main(Main.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:55)
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37)
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54)
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72)
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81)
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65)
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:102)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.15.2
+	Minecraft Version ID: 1.15.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_221, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1000457576 bytes (954 MB) / 1885863936 bytes (1798 MB) up to 3810525184 bytes (3634 MB)
+	CPUs: 12
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 5.0.0+68+master.79f13f7
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/eventbus-2.0.0-milestone.1-service.jar eventbus PLUGINSERVICE 
+		/forge-1.15.2-31.1.0_mapped_stable_60-1.15-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.15.2-31.1.0_mapped_stable_60-1.15-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-2.0.0-milestone.1-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.15.2-31.1.0_mapped_stable_60-1.15-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.15.2-31.1.0_mapped_stable_60-1.15-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/forge-1.15.2-31.1.0_mapped_stable_60-1.15-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 31.1
+	Forge: net.minecraftforge:31.1.0
+	FML Language Providers: 
+		javafml@31.1
+		minecraft@1
+	Mod List: 
+		client-extra.jar Minecraft {minecraft@1.15.2 LOAD_REGISTRIES}
+		main Fromage {fromage@NONE LOAD_REGISTRIES}
+		forge-1.15.2-31.1.0_mapped_stable_60-1.15-recomp.jar Forge {forge@31.1.0 LOAD_REGISTRIES}
+	Launched Version: MOD_DEV
+	Backend library: LWJGL version 3.2.2 build 10
+	Backend API: GeForce GTX 1080/PCIe/SSE2 GL version 4.6.0 NVIDIA 442.74, NVIDIA Corporation
+	GL Caps: Using framebuffer using OpenGL 3.0
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	CPU: 12x Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz
